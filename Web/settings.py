@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "webapp",  #添加创建的app
 ]
+
+AUTH_PROFILE_MODULE = 'webapp.UserProfile'  #设置一对一关联的用户表
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -200,7 +203,7 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'handlers': ['default', 'console'],
+            'handlers': ['default'],
             'level': 'DEBUG',
             'propagate': False
         },

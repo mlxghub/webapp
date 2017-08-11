@@ -4,7 +4,7 @@ logger = logging.getLogger(__name__)
 
 # Create your views here.
 def login_page():
-    return "aa"
+    pass
 
 def home_page():
     pass
