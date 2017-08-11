@@ -164,7 +164,7 @@ LOGGING = {
             'include_html': True,
         },
         'default': {
-            'level':'DEBUG',
+            'level':'ERROR',
             'class':'logging.handlers.RotatingFileHandler',
             'filename': BASE_DIR +'/log/all.log',     #日志输出文件
             'maxBytes': 1024*1024*5,                  #文件大小 5M
