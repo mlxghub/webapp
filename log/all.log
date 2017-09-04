@@ -3614,3 +3614,7 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_erro
 2017-08-11 11:16:54,753 [Dummy-1:9140] [django.db.backends:91] [utils:execute] [DEBUG]- (0.000) SELECT VERSION(); args=None
 2017-08-11 11:16:54,808 [Dummy-1:9140] [django.db.backends:91] [utils:execute] [DEBUG]- (0.003) SHOW FULL TABLES; args=None
 2017-08-11 11:16:54,813 [Dummy-1:9140] [django.db.backends:91] [utils:execute] [DEBUG]- (0.002) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-09-04 19:14:33,649 [Thread-3:17348] [django.request:152] [base:get_response] [WARNING]- Not Found: /allstatic/bootstrap/css/bootstrap.min.css
+2017-09-04 19:14:33,729 [Thread-4:8936] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-09-04 19:15:20,174 [Thread-4:21376] [django.request:152] [base:get_response] [WARNING]- Not Found: /allstatic/bootstrap/css/bootstrap.min.css
+2017-09-04 19:17:44,836 [Thread-3:6028] [django.request:152] [base:get_response] [WARNING]- Not Found: /allstatic/bootstrap/css/bootstrap.min.css
