@@ -5,7 +5,7 @@ from django.dispatch import receiver
 # Create your models here.
 
 class UserProfile(models.Model):
-    SEX_CHOICES = {  #字典
+    SEX_CHOICES = {#字典
         1: 'boy',
         2: 'girl',
     }
@@ -31,7 +31,7 @@ def create_user_profile(sender, instance, created, **kwargs):
 post_save.connect(create_user_profile, sender=User)
 
 class Novel(models.Model):
-    TYPE_CHOICES = {  # 字典
+    TYPE_CHOICES = {  #字典
         1: '玄幻',
         2: '武侠',
         3: '仙侠',

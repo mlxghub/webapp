@@ -229,9 +229,6 @@ LOGGING = {
         }
     }
 }
-'''
-formatters 用来配置日志打印的格式
+'''formatters 用来配置日志打印的格式
 handlers用来定义具体处理日志的方式，可以定义很多种，"default" 就是默认方式,"console" 就是打印到控制台方式.
-loggers 是用来配置用哪几种 handlers 来处理日志，比如你同时需要输出日志到文件，和到控制台，那就必须配置  两种handlers.
-
-'''
+loggers 是用来配置用哪几种 handlers 来处理日志，比如你同时需要输出日志到文件，和到控制台，那就必须配置  两种handlers.'''
