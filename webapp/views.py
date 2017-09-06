@@ -1,10 +1,20 @@
 from django.shortcuts import render
 import logging
+from webapp import  forms
 logger = logging.getLogger(__name__)
 
 # Create your views here.
 def login_page(request):
-    return render(request, 'index.html')
-
+    if (request.method == "POST"):
+        if (request.POST["username"] or request.POST["email"] or request.POST["password"] or request.POST["yzm"]):
+            signup_input = forms.Signup(request.POST)
+            if signup_input.is_valid():
+                data = signup_input.clean()
+                print(data)
+            else:
+                error_msg = signup_input.errors
+                return render(request,'index.html',{'errors':error_msg})
+        else:
+            pass
 def home_page():
     pass

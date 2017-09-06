@@ -33,25 +33,34 @@
         <a id = "login" >登录</a>
     </div >
         <div  class="signup" >
-        <form action="#">
-          <div class="zhuce-inputs">
-              <input class="other" type="text" placeholder="用户名" >
-              <input class="other" type="text" placeholder="注册邮箱">
-              <input class="other" type="password" placeholder="设置密码">
-              <input class="yanzhen" type="text" placeholder="邮箱验证码">
-              <button type="button" class="btn btn-info yanzhen">点击发送</button>
-          </div>
-            <button type="button" class="btn btn-primary other" >注册</button>
+        <form action="#" method="POST">
+            {%csrf_token%}
+              <div class="zhuce-inputs">
+              <input class="other" type="text" name = "username" placeholder="用户名" >
+              <input class="other" type="text" name = "email" placeholder="注册邮箱">
+              <input class="other" type="password" name = "password" placeholder="设置密码">
+              <input class="yanzhen" type="text" name = "yzm" placeholder="邮箱验证码">
+              <button type="submit" class="btn btn-info yanzhen">点击发送</button>
+              </div>
+            <input type="submit" class="btn btn-primary other" value="注册">
+            </form>
             <h5>注册代表同意<a>注册协议</a></h5>
         </div>
         <div class="signin">
-        <form action="#">
+        <form action="#" method="POST">
           <div class="login-inputs">
-              <input class="other" type="text" placeholder="邮箱" >
-              <input class="other" type="password" placeholder="密码">
+              <input class="other" type="text" name = "login_email" placeholder="邮箱" >
+              <input class="other" type="password" name = "login_password" placeholder="密码">
+              {%csrf_token%}
           </div>
-            <button type="button" class="btn btn-primary other" >登录</button>
+            <input type="submit" class="btn btn-primary other" value="登录" >
+            </form>
         </div>
+        {{ errors.email }}
+        {{ errors.username }}
+        {{ errors.password }}
+        {{ errors.yzm }}
+
     </div>
 </div>
 </div>

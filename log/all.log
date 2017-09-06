@@ -3626,3 +3626,75 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_erro
 2017-09-05 17:29:17,581 [Thread-882:6948] [django.server:124] [basehttp:log_message] [ERROR]- "GET /static/js/index.js HTTP/1.1" 500 59
 2017-09-05 17:29:17,582 [Thread-881:7720] [django.server:124] [basehttp:log_message] [ERROR]- "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 500 59
 2017-09-06 08:58:38,700 [Thread-15:3564] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-09-06 15:44:49,032 [Thread-2:9584] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Web\webapp\views.py", line 8, in login_page
+    print(request.POST.index('username'))
+AttributeError: 'QueryDict' object has no attribute 'index'
+2017-09-06 15:44:49,192 [Thread-2:9584] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 69977
+2017-09-06 15:45:31,847 [Thread-2:3564] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view webapp.views.login_page didn't return an HttpResponse object. It returned None instead.
+2017-09-06 15:45:31,907 [Thread-2:3564] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 62290
+2017-09-06 15:45:45,689 [Thread-4:9608] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view webapp.views.login_page didn't return an HttpResponse object. It returned None instead.
+2017-09-06 15:45:45,773 [Thread-4:9608] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 62155
+2017-09-06 15:45:59,304 [Thread-5:5292] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view webapp.views.login_page didn't return an HttpResponse object. It returned None instead.
+2017-09-06 15:45:59,351 [Thread-5:5292] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 62159
+2017-09-06 15:59:27,274 [Thread-5:10096] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Web\webapp\views.py", line 11, in login_page
+    if signup_input.is_valid():
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 183, in is_valid
+    return self.is_bound and not self.errors
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 175, in errors
+    self.full_clean()
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 384, in full_clean
+    self._clean_fields()
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 405, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "F:\Web\webapp\forms.py", line 21, in clean_email
+    if (User.objects.get(email)):
+  File "D:\Python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python\lib\site-packages\django\db\models\query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "D:\Python\lib\site-packages\django\db\models\query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\Python\lib\site-packages\django\db\models\query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\Python\lib\site-packages\django\db\models\sql\query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\Python\lib\site-packages\django\db\models\sql\query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "D:\Python\lib\site-packages\django\db\models\sql\query.py", line 1151, in build_filter
+    arg, value = filter_expr
+ValueError: too many values to unpack (expected 2)
+2017-09-06 15:59:27,653 [Thread-5:10096] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 117962
