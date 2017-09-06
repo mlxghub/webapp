@@ -3625,3 +3625,4 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_erro
 2017-09-05 16:24:40,508 [Thread-184:10060] [django.request:152] [base:get_response] [WARNING]- Not Found: /webapp/static/pictrue/bg_294f1b9.png
 2017-09-05 17:29:17,581 [Thread-882:6948] [django.server:124] [basehttp:log_message] [ERROR]- "GET /static/js/index.js HTTP/1.1" 500 59
 2017-09-05 17:29:17,582 [Thread-881:7720] [django.server:124] [basehttp:log_message] [ERROR]- "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 500 59
+2017-09-06 08:58:38,700 [Thread-15:3564] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico

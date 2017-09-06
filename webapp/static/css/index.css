@@ -34,10 +34,15 @@ div.a a{
     display: inline-block;
     margin: 0px 50px 0px 50px;
     opacity:0.7;
+
+}
+a#zhuce{
+    color: #5bc0de;
+}
+a#login{
     color: #555;
 }
-
-input {
+input.other{
       font-family: inherit;
       border: 0;
       border-top: 1px solid #e8e8e8;
@@ -48,14 +53,30 @@ input {
       outline: none;
       font-size: 14px;
     }
-
-button{
+.yanzhen{
+      font-family: inherit;
+      border: 0;
+      border-top: 1px solid #e8e8e8;
+      height: 48px;
+      box-sizing: border-box;
+      outline: none;
+      font-size: 14px;
+    }
+input.yanzhen{
+      width: 200px;
+    padding: 14px 11.2px;
+    }
+button.yanzhen{
+      width: 105px;
+    }
+.other{
     width: 100%;
     height: 48px;
-    margin: 10px 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
 }
 .signin{
     display: none;
+
 }
 .signup{
     display: block;

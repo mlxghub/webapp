@@ -3,7 +3,7 @@
  */
 var a=$("img");
 var b= new Array(9);
-var t
+var t;
 for (var i=0;i<a.length;i++)
 {
 b[i] = a[i].src;
@@ -20,6 +20,20 @@ a[i].src = b[i];
 }
 t=setTimeout("time()",3000)
 }
-time()
+time();
+
+$("#login").click(function () {
+
+    $("#login").css("color","#5bc0de")
+    $("#zhuce").css("color","#555")
+    $(".signup").css("display","none");
+    $(".signin").css("display","block");
+});
+$("#zhuce").click(function () {
+    $("#login").css("color","#555")
+    $("#zhuce").css("color","#5bc0de")
+    $(".signin").css("display","none");
+    $(".signup").css("display","block");
+});
 
 
