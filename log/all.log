@@ -3698,3 +3698,88 @@ Traceback (most recent call last):
     arg, value = filter_expr
 ValueError: too many values to unpack (expected 2)
 2017-09-06 15:59:27,653 [Thread-5:10096] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 117962
+2017-09-07 08:48:13,717 [Thread-2:5336] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view webapp.views.login_page didn't return an HttpResponse object. It returned None instead.
+2017-09-07 08:48:13,902 [Thread-2:5336] [django.server:124] [basehttp:log_message] [ERROR]- "GET / HTTP/1.1" 500 60864
+2017-09-07 08:48:14,744 [Thread-3:8468] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-09-07 08:57:43,281 [Thread-2:4880] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view webapp.views.login_page didn't return an HttpResponse object. It returned None instead.
+2017-09-07 08:57:43,338 [Thread-2:4880] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 61894
+2017-09-07 08:57:47,691 [Thread-3:7380] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view webapp.views.login_page didn't return an HttpResponse object. It returned None instead.
+2017-09-07 08:57:47,745 [Thread-3:7380] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 61894
+2017-09-07 09:04:00,933 [Thread-19:10192] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view webapp.views.login_page didn't return an HttpResponse object. It returned None instead.
+2017-09-07 09:04:00,989 [Thread-19:10192] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 61894
+2017-09-07 10:02:09,305 [Thread-2:10072] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Web\webapp\views.py", line 11, in login_page
+    if signup_input.is_valid():
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 183, in is_valid
+    return self.is_bound and not self.errors
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 175, in errors
+    self.full_clean()
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 384, in full_clean
+    self._clean_fields()
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 405, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "F:\Web\webapp\forms.py", line 28, in clean_email
+    if (User.objects.get(email = email)):
+  File "D:\Python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+django.contrib.auth.models.DoesNotExist: User matching query does not exist.
+2017-09-07 10:02:09,567 [Thread-2:10072] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 96218
+2017-09-07 10:10:28,734 [Thread-4:13992] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Web\webapp\views.py", line 11, in login_page
+    if signup_input.is_valid():
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 183, in is_valid
+    return self.is_bound and not self.errors
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 175, in errors
+    self.full_clean()
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 384, in full_clean
+    self._clean_fields()
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 405, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "F:\Web\webapp\forms.py", line 30, in clean_email
+    if (User.objects.get(email=email)):
+  File "D:\Python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+django.contrib.auth.models.DoesNotExist: User matching query does not exist.
+2017-09-07 10:10:28,840 [Thread-4:13992] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 96228

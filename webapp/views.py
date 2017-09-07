@@ -16,5 +16,7 @@ def login_page(request):
                 return render(request,'index.html',{'errors':error_msg})
         else:
             pass
+    else:
+        return render(request, 'index.html')
 def home_page():
     pass
