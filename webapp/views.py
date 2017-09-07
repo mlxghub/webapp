@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 # Create your views here.
 def login_page(request):
     if (request.method == "POST"):
-        if (request.POST["username"] or request.POST["email"] or request.POST["password"] or request.POST["yzm"]):
+        if ("username" in request.POST.keys()):
             signup_input = forms.Signup(request.POST)
             if signup_input.is_valid():
                 data = signup_input.clean()

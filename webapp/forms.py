@@ -39,9 +39,3 @@ class Signup(forms.Form):
         if (yzm != "4569"):
             raise  forms.ValidationError('验证码失效')
         return  yzm
-    def clean(self):
-        try:
-            email = self.cleaned_data.get('email')
-        except Exception as e:
-            raise forms.ValidationError("邮箱格式不符合要求")
-        return  self.cleaned_data
