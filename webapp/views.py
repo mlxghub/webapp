@@ -17,6 +17,6 @@ def login_page(request):
         else:
             pass
     else:
-        return render(request, 'index.html')
+        return render(request,'index.html')
 def home_page():
     pass
