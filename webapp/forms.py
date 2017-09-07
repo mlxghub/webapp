@@ -3,6 +3,7 @@ from  webapp import  models
 import re
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
+from django.core.exceptions import ObjectDoesNotExist
 
 def email_validate(value):
     email_re = re.compile(r'^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$')
@@ -25,12 +26,12 @@ class Signup(forms.Form):
 
     def clean_email(self):
         email = self.cleaned_data.get('email')
-
         try:
-            if (User.objects.get(email=email)):
-                raise forms.ValidationError('此邮箱已被注册')
-        except Exception as e:
-            print(e)
+            # 判断邮箱是否被注册
+            User.objects.get(email=email)
+        except ObjectDoesNotExist as e:
+            return email
+        raise forms.ValidationError('该邮箱已被使用')
         return email
 
     def clean_yzm(self):

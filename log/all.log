@@ -3783,3 +3783,55 @@ Traceback (most recent call last):
     self.model._meta.object_name
 django.contrib.auth.models.DoesNotExist: User matching query does not exist.
 2017-09-07 10:10:28,840 [Thread-4:13992] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 96228
+2017-09-07 20:30:03,359 [Thread-18:16320] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Web\webapp\views.py", line 11, in login_page
+    if signup_input.is_valid():
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 183, in is_valid
+    return self.is_bound and not self.errors
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 175, in errors
+    self.full_clean()
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 384, in full_clean
+    self._clean_fields()
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 405, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "F:\Web\webapp\forms.py", line 28, in clean_email
+    emailinfo = User.objects.get(email=email)
+  File "D:\Python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+django.contrib.auth.models.DoesNotExist: User matching query does not exist.
+2017-09-07 20:30:03,422 [Thread-18:16320] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 96217
+2017-09-07 20:31:16,873 [Thread-2:13336] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Web\webapp\views.py", line 11, in login_page
+    if signup_input.is_valid():
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 183, in is_valid
+    return self.is_bound and not self.errors
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 175, in errors
+    self.full_clean()
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 384, in full_clean
+    self._clean_fields()
+  File "D:\Python\lib\site-packages\django\forms\forms.py", line 405, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "F:\Web\webapp\forms.py", line 28, in clean_email
+    emailinfo = User.objects.get(email=zemail)
+  File "D:\Python\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+django.contrib.auth.models.DoesNotExist: User matching query does not exist.
+2017-09-07 20:31:16,935 [Thread-2:13336] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 96222
