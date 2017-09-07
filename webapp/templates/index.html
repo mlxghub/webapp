@@ -37,10 +37,14 @@
             {%csrf_token%}
               <div class="zhuce-inputs">
               <input class="other" type="text" name = "username" placeholder="用户名" >
+                  {{ errors.username }}
               <input class="other" type="text" name = "email" placeholder="注册邮箱">
+                   {{ errors.email }}
               <input class="other" type="password" name = "password" placeholder="设置密码">
+                  {{ errors.password }}
               <input class="yanzhen" type="text" name = "yzm" placeholder="邮箱验证码">
               <button type="submit" class="btn btn-info yanzhen">点击发送</button>
+                  {{ errors.yzm }}
               </div>
             <input type="submit" class="btn btn-primary other" value="注册">
             </form>
@@ -56,14 +60,10 @@
             <input type="submit" class="btn btn-primary other" value="登录" >
             </form>
         </div>
-        {{ errors.email }}
-        {{ errors.username }}
-        {{ errors.password }}
-        {{ errors.yzm }}
-
     </div>
 </div>
 </div>
+
 <script src="/static/jquery.js"></script>
 <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 <script src="/static/js/index.js"></script>

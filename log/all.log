@@ -3835,3 +3835,11 @@ Traceback (most recent call last):
     self.model._meta.object_name
 django.contrib.auth.models.DoesNotExist: User matching query does not exist.
 2017-09-07 20:31:16,935 [Thread-2:13336] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 96222
+2017-09-07 21:07:27,726 [Thread-4:13940] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view webapp.views.login_page didn't return an HttpResponse object. It returned None instead.
+2017-09-07 21:07:27,772 [Thread-4:13940] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 61894

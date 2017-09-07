@@ -2,13 +2,14 @@ body {
 
     background-image: url("/static/pictrue/bg_294f1b9.png");
     background-repeat: no-repeat;
-    background-attachment:fixed;
-    background-position: 0px 50px;;
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: 0px 50px;
 }
 
 #frame1{
     margin: 150px 0px 0px 0px;  /* 上外边距  右外边距  下外边距  左外边距*/
-    position:fixed;
+    position:absolute;
 }
 
 .image {
