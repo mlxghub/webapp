@@ -39,3 +39,11 @@ class Signup(forms.Form):
         if (yzm != "4569"):
             raise  forms.ValidationError('验证码失效')
         return  yzm
+
+class Signin(forms.Form):
+    login_password =forms.CharField(
+        required=True,min_length=6,error_messages={'required':'密码不能为空','min_length':'密码至少六位'}
+    )
+    login_email = forms.CharField(validators=[email_validate,],
+        required=True,error_messages={'required':'邮箱不能为空'}
+    )

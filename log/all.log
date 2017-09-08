@@ -3859,3 +3859,29 @@ Traceback (most recent call last):
     "returned None instead." % (callback.__module__, view_name)
 ValueError: The view webapp.views.login_page didn't return an HttpResponse object. It returned None instead.
 2017-09-07 22:23:03,948 [Thread-7:20388] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 61920
+2017-09-08 11:17:10,079 [Thread-15:19544] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-09-08 17:49:29,349 [Thread-8:8440] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-09-08 17:59:17,699 [Thread-2:8980] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Web\webapp\views.py", line 19, in login_page
+    return HttpResponse(error_msg.yzm)
+AttributeError: 'ErrorDict' object has no attribute 'yzm'
+2017-09-08 17:59:17,869 [Thread-2:8980] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 70802
+2017-09-08 18:09:33,180 [Thread-2:23520] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\Web\webapp\views.py", line 19, in login_page
+    return HttpResponse(json.dump(error_msg))
+TypeError: dump() missing 1 required positional argument: 'fp'
+2017-09-08 18:09:33,256 [Thread-2:23520] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 70929
