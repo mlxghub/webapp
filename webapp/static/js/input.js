@@ -8,16 +8,17 @@ $(document).ready(function() {
         var password = $("#signup_password").val();
         var yzm = $("#signup_yzm").val();
         $.ajax({
-            url: "/login/",
+            url: "",
             type: "POST",
             data: {"username": username, "email": email, "password": password, "yzm": yzm},
-            headers: {"X-CSRFtoken": $.cookie("csrftoken")},
-            success: function (data) {
-                alert("ok")
+            cache: false,
+            dataType: "html",
+            success: function(data) {
+                alert(data);
             },
-            error: function (data) {
-                alert("ok");
+            error: function() {
+                alert("请求失败");
             }
         })
-    })
-})
+    });
+});

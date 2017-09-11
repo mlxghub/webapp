@@ -3885,3 +3885,38 @@ Traceback (most recent call last):
     return HttpResponse(json.dump(error_msg))
 TypeError: dump() missing 1 required positional argument: 'fp'
 2017-09-08 18:09:33,256 [Thread-2:23520] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 70929
+2017-09-11 14:02:13,597 [Thread-26:3716] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-09-11 14:02:13,657 [Thread-27:1328] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-09-11 14:17:50,650 [Thread-71:9592] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /home/
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: home_page() takes 0 positional arguments but 1 was given
+2017-09-11 14:17:51,362 [Thread-71:9592] [django.server:124] [basehttp:log_message] [ERROR]- "POST /home/ HTTP/1.1" 500 66861
+2017-09-11 14:20:06,260 [Thread-73:432] [django.request:135] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /home/
+Traceback (most recent call last):
+  File "D:\Python\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\Python\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: home_page() takes 0 positional arguments but 1 was given
+2017-09-11 14:20:06,310 [Thread-73:432] [django.server:124] [basehttp:log_message] [ERROR]- "POST /home/ HTTP/1.1" 500 66861
+2017-09-11 14:32:43,434 [Thread-2:5464] [django.request:152] [base:get_response] [WARNING]- Not Found: /
+2017-09-11 14:32:44,640 [Thread-3:10716] [django.request:152] [base:get_response] [WARNING]- Not Found: /
+2017-09-11 14:39:44,511 [Thread-2:11772] [django.request:152] [base:get_response] [WARNING]- Not Found: /ok/
+2017-09-11 14:39:48,394 [Thread-3:6800] [django.request:152] [base:get_response] [WARNING]- Not Found: /ok/
+2017-09-11 14:54:52,231 [Thread-28:12512] [django.server:124] [basehttp:log_message] [ERROR]- "POST /home/ HTTP/1.1" 500 59
+2017-09-11 15:01:59,752 [Thread-17:8408] [django.server:124] [basehttp:log_message] [ERROR]- "POST /home/ HTTP/1.1" 500 59
+2017-09-11 15:03:56,298 [Thread-2:13860] [django.server:124] [basehttp:log_message] [ERROR]- "POST /home/ HTTP/1.1" 500 59
+2017-09-11 15:06:44,968 [Thread-12:13624] [django.server:124] [basehttp:log_message] [ERROR]- "POST /home/ HTTP/1.1" 500 59
+2017-09-11 15:08:59,679 [Thread-85:12496] [django.server:124] [basehttp:log_message] [ERROR]- "POST / HTTP/1.1" 500 59
+2017-09-11 15:24:32,693 [Thread-151:9556] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-09-11 15:24:32,723 [Thread-152:12276] [django.request:152] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-09-11 15:46:06,225 [Thread-21:13792] [django.request:152] [base:get_response] [WARNING]- Not Found: /545
+2017-09-11 15:46:55,262 [Thread-22:9312] [django.request:152] [base:get_response] [WARNING]- Not Found: /545

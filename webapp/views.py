@@ -14,7 +14,7 @@ def login_page(request):
         if ("username" in request.POST.keys()):
             signup_input = forms.Signup(request.POST)
             if signup_input.is_valid():
-                data = signup_input.clean()
+               data = signup_input.clean()
             else:
                 error_msg = signup_input.errors
                 return JsonResponse(error_msg)
